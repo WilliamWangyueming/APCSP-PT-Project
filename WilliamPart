@@ -1,0 +1,20 @@
+penColor("black");
+dot(1000);
+function Star(n, x, y) {
+  penUp();
+  moveTo(x, y);
+  penDown();
+  penColor("yellow");
+  for (var i = 0; i < 5; i++) {
+    turnLeft(162);
+    moveForward(n);
+    turnRight(72);
+    moveForward(n);
+    turnRight(18);
+  }
+}
+for (var i = 0; i < 20; i++) {
+  Star(randomNumber(3,20 ), randomNumber(0, 400), randomNumber(0, 400));
+}
+button("id", "ignite");
+drawImageURL(__);
